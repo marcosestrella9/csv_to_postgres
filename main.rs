@@ -44,7 +44,7 @@ static mut observado:i32=1;
 fn main() -> Result<(), Error> {
     //rocket::ignite().mount("/", routes![index]).launch();
     //client postgres
-    let mut client = Client::connect("postgresql://postgres:microseb1@localhost:5432/postgres", NoTls)?;
+    let mut client = Client::connect("postgresql://postgres:passwrd@localhost:5432/postgres", NoTls)?;
     //create  table
     client.batch_execute("
         CREATE TABLE IF NOT EXISTS PERSONA (
